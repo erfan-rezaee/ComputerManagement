@@ -17,11 +17,8 @@ public class Main {
 
         Storage storage = new Storage(512,"SSD");
 
-        System.out.println("========== Computer Starting ==========");
-        System.out.println();
         Computer computer = new Computer(cpu, ram, storage);
         computer.start();
-        System.out.println("========== Specifications ==========");
         computer.showSpecifications();
     }
 }

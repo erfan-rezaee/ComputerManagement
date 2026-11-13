@@ -4,6 +4,8 @@ import Computer.components.CPU;
 import Computer.components.RAM;
 import Computer.components.Storage;
 
+import java.net.ServerSocket;
+
 public class Computer {
 
     private final CPU cpu;
@@ -17,6 +19,8 @@ public class Computer {
     }
 
     public void start(){
+        System.out.println("========== Computer Starting ==========");
+        System.out.println();
         ram.load();
         System.out.println();
         storage.read();
@@ -28,9 +32,10 @@ public class Computer {
 
     public void showSpecifications(){
 
-        System.out.println("CPU: " + cpu.brand);
-        System.out.println("RAM: " + ram.capacity+ "GB" + " " + ram.type);
-        System.out.println("Storage: " + storage.capacity + "GB" + " " + storage.type);
+        System.out.println("========== Specifications ==========");
+        System.out.println("CPU: " + cpu.getBrand());
+        System.out.println("RAM: " + ram.getCapacity()+ "GB" + " " + ram.getType());
+        System.out.println("Storage: " + storage.getCapacity() + "GB" + " " + storage.getType());
 
     }
 }
